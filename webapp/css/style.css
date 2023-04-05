@@ -1,0 +1,13 @@
+/* back ground ivory color for  table column inheriting */
+/* sapMListTblCell.colSet {
+    background-color: #fffff0;
+} */
+
+/* Path: webapp\css\style.css */
+/* back ground ivory color for  table column inheriting */
+.sapMListTblRow.sapMListTblRowMiddle>td .style sapMListTblCell{
+    background-color: indianred;
+}
+
+tr[data=_ObjectStatus1]
+

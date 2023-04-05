@@ -1,0 +1,504 @@
+{
+    "stackedColumn": {
+        "sap.app": {
+            "id": "dash0404",
+            "type": "card"
+        },
+        "sap.card": {
+            "type": "Analytical",
+            "header": {
+                "type": "Numeric",
+                "data": {
+                    "path": "/"
+                },
+                "title": "Failure Breakdown - Q1, 2019",
+                "mainIndicator": {
+                    "number": "{ConnNum}"
+                },
+                "actions": [
+                    {
+                        "type": "Navigation"
+                    }
+                ]
+            },
+            "content": {
+                "chartType": "StackedColumn",
+                "legend": {
+                    "visible": true,
+                    "position": "Bottom",
+                    "alignment": "Left"
+                },
+                "plotArea": {
+                    "dataLabel": {
+                        "visible": false,
+                        "showTotal": false
+                    },
+                    "categoryAxisText": {
+                        "visible": false
+                    },
+                    "valueAxisText": {
+                        "visible": false
+                    }
+                },
+                "title": {
+                    "visible": false
+                },
+                "measureAxis": "valueAxis",
+                "dimensionAxis": "categoryAxis",
+                "data": {
+                    "request": {
+                        "url": "/",
+                        "path": "/"
+                    }
+                },
+                "dimensions": [
+                    {
+                        "label": "Categories",
+                        "value": "{Category}"
+                    }
+                ],
+                "measures": [
+                    {
+                        "label": "Revenue",
+                        "value": "{Revenue}"
+                    }, {
+                        "label": "Cost",
+                        "value": "{Cost}"
+                    }, {
+                        "label": "Target",
+                        "value": "{Target}"
+                    }
+                ],
+				"actionableArea": "Chart",
+                "actions": [
+                    {
+                        "type": "Press"
+
+                    }
+                ]
+            }
+        }
+    },
+    "donut": {
+        "sap.app": {
+            "id": "sample.CardsLayout.model.donut",
+            "type": "card"
+        },
+        "sap.card": {
+            "type": "Analytical",
+            "header": {
+                "title": "사용자 접속현황 분석",
+                "subTitle": "매일 ERP를 사용하는 사용자가 72.5% 되고, 사용자의 15.8%가 주2일 미만 사용하고 있어 전반적으로 ERP 의 활용도가 양호해 보입니다. (평균 주 4.6회 접속)",
+                "actions": [
+                    {
+                        "type": "Navigation"
+                    }
+                ]
+            },
+            "content": {
+                "chartType": "Donut",
+                "chartProperties": {
+                    "legendGroup": {
+                        "layout": {
+                            "position": "right",
+                            "alignment": "center"
+                        }
+                    },
+                    "plotArea": {
+                        "dataLabel": {
+                            "visible": true
+                        }
+                    },
+                    "title": {
+                        "visible": false
+                    }
+                },
+                "data": {
+                    "request": {
+
+                        "url": "/sap/opu/odata/SAP/ZASCMT_SRV/ZASCMT2001Set?$top=5"
+
+                    },
+                    "path": "/d/results"
+                },
+                "dimensions": [
+                    {
+                        "name": "접속 일수",
+                        "value": "{Itext}"
+                    }
+                ],
+                "measures": [
+                    {
+                        "name": "사용자 수",
+                        "value": "{ConnNum}"
+                    }, {
+                        "name": "구성비",
+                        "value": "{Ptext}"
+                    }
+
+                ],
+                "feeds": [
+                    {
+                        "type": "Dimension",
+                        "uid": "color",
+                        "values": ["접속 일수"]
+                    }, {
+                        "type": "Measure",
+                        "uid": "size",
+                        "values": ["사용자 수"]
+                    }
+                ],
+                "minHeight": "20rem",
+				"actionableArea": "Chart",
+                "actions": [
+                    {
+                        "type": "Press"
+                    }
+
+                ]
+            }
+        }
+    },
+    "chart1": {
+        "sap.app": {
+            "id": "card.explorer.analytical.barWithReferenceLines.card",
+            "type": "card",
+            "title": "Sample of Bar Chart with Reference Lines",
+            "subTitle": "Sample of Bar Chart with Reference Lines",
+            "applicationVersion": {
+                "version": "1.0.0"
+            },
+            "shortTitle": "A short title for this Card",
+            "info": "Additional information about this Card",
+            "description": "A long description for this Card",
+            "tags": {
+                "keywords": ["Analytical", "Card", "Bar", "Sample"]
+            }
+        },
+        "sap.ui": {
+            "technology": "UI5"
+        },
+        "sap.card": {
+            "type": "Analytical",
+            "header": {
+                "title": "프로그램 개발 및 활용도",
+                "subTitle": "개발된 프로그램 1026본 중 42%가 현재 사용 중",
+				"actions": [
+                    {
+                        "type": "Press"
+                    }
+                ]
+            },
+            "content": {
+                "data": {
+                    "request": {
+
+                        "url": "/sap/opu/odata/SAP/ZASCMT_SRV/ZASCMT2003Set?$top=11"
+
+                    },
+                    "path": "/d/results"
+                },
+                "chartType": "bar",
+                "chartProperties": {
+                    "title": {
+                        "visible": false
+                    },
+                    "legend": {
+                        "visible": false
+                    },
+                    "plotArea": {
+                        "referenceLine": {
+                            "line": {
+                                "valueAxis": [
+                                    {
+                                        "value": 40,
+                                        "visible": true,
+                                        "label": {
+                                            "text": "Low Performance",
+                                            "visible": true,
+                                            "background": "sapUiNegativeElement"
+                                        },
+                                        "color": "sapUiNegativeElement"
+                                    }, {
+                                        "value": 120,
+                                        "visible": true,
+                                        "label": {
+                                            "text": "Medium Performance",
+                                            "visible": true,
+                                            "background": "sapUiCriticalElement"
+                                        },
+                                        "color": "sapUiCriticalElement"
+                                    }, {
+                                        "value": 220,
+                                        "visible": true,
+                                        "label": {
+                                            "text": "High Performance",
+                                            "visible": true,
+                                            "background": "sapUiPositiveElement"
+                                        },
+                                        "color": "sapUiPositiveElement"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "minHeight": "20rem",
+                "dimensions": [
+                    {
+                        "name": "Modl",
+                        "value": "{Modl}"
+                    }, {
+                        "name": "Name",
+                        "value": "{Name1}"
+                    }
+                ],
+                "measures": [
+                    {
+                        "name": "TotUse",
+                        "value": "{TotUse}"
+                    }, {
+                        "name": "UseRate",
+                        "value": "{UseRate}"
+                    }
+                ],
+                "feeds": [
+                    {
+                        "uid": "valueAxis",
+                        "type": "Measure",
+                        "values": ["TotUse", "UseRate"]
+                    }, {
+                        "uid": "categoryAxis",
+                        "type": "Dimension",
+                        "values": ["Modl", "Name"]
+                    }
+                ],
+				"actions": [
+                    {
+                        "type": "Press"
+                    }
+                ]
+            }
+        }
+    },
+    "chart2": {
+        "sap.app": {
+            "id": "card.explorer.analytical.bubble.card",
+            "type": "card",
+            "title": "Sample of a Bubble Chart",
+            "subTitle": "Sample of a Bubble Chart",
+            "applicationVersion": {
+                "version": "1.0.0"
+            },
+            "shortTitle": "A short title for this Card",
+            "info": "Additional information about this Card",
+            "description": "A long description for this Card",
+            "tags": {
+                "keywords": ["Analytical", "Card", "Bubble", "Sample"]
+            }
+        },
+        "sap.ui": {
+            "technology": "UI5"
+        },
+        "sap.card": {
+            "type": "Analytical",
+            "header": {
+                "title": "CBO 사용율 그래프"
+            },
+            "content": {
+                "data": {
+                    "request": {
+
+                        "url": "/sap/opu/odata/SAP/ZASCMT_SRV/ZASCMT2003Set?$top=11"
+
+                    },
+                    "path": "/d/results"
+                },
+                "chartType": "bubble",
+                "chartProperties": {
+                    "title": {
+                        "visible": false
+                    },
+                    "legendGroup": {
+                        "layout": {
+                            "position": "right",
+                            "alignment": "topLeft"
+                        }
+                    }
+                },
+
+                "minHeight": "20rem",
+                "dimensions": [
+                    {
+                        "name": "Modl",
+                        "value": "{Modl}"
+                    }, {
+                        "name": "Name",
+                        "value": "{Name1}"
+                    }
+                ],
+                "measures": [
+                    {
+                        "name": "TotUse",
+                        "value": "{TotUse}"
+                    },
+                    {
+                        "name": "UseRate",
+                        "value": "{UseRate}"
+                    },
+                    {
+                        "name": "CboRate",
+                        "value": "{CboRate}"
+                    },
+                    {
+                        "name": "StdRate",
+                        "value": "{StdRate}"
+                    }, {
+                        "name": "DevNum",
+                        "value": "{DevNum}"
+                    }, {
+                        "name": "CobUse",
+                        "value": "{CobUse}"
+                    }
+                ],
+                "feeds": [
+                    {
+                        "uid": "valueAxis",
+                        "type": "Measure",
+                        "values": ["DevNum"]
+                    }, {
+                        "uid": "valueAxis2",
+                        "type": "Measure",
+                        "values": ["CobUse"]
+                    }, {
+                        "uid": "bubbleWidth",
+                        "type": "Measure",
+                        "values": ["TotUse"]
+                    }, {
+                        "uid": "color",
+                        "type": "Dimension",
+                        "values": ["Modl"]
+                    }
+                ]
+            }
+        }
+    },
+    "chart3": {
+        "sap.app": {
+            "id": "card.explorer.line.card",
+            "type": "card",
+            "title": "Sample of a Line Chart",
+            "subTitle": "Sample of a Line Chart",
+            "applicationVersion": {
+                "version": "1.0.0"
+            },
+            "shortTitle": "A short title for this Card",
+            "info": "Additional information about this Card",
+            "description": "A long description for this Card",
+            "tags": {
+                "keywords": ["Analytical", "Card", "Line", "Sample"]
+            }
+        },
+        "sap.ui": {
+            "technology": "UI5"
+        },
+        "sap.card": {
+            "type": "Analytical",
+            "header": {
+                "title": "CBO 사용율 그래프"
+            },
+            "content": {
+                "data": {
+                    "request": {
+
+                        "url": "/sap/opu/odata/SAP/ZASCMT_SRV/ZASCMT2003Set?$top=11"
+
+                    },
+                    "path": "/d/results"
+                },
+                "chartType": "Line",
+                "chartProperties": {
+                    "title": {
+                        "text": "CBO vs STD",
+                        "visible": true,
+                        "alignment": "left"
+                    },
+                    "legend": {
+                        "visible": true
+                    },
+                    "legendGroup": {
+                        "layout": {
+                            "position": "right",
+                            "alignment": "topLeft"
+                        }
+                    },
+                    "plotArea": {
+                        "dataLabel": {
+                            "visible": true
+                        }
+                    },
+                    "categoryAxis": {
+                        "title": {
+                            "visible": false
+                        }
+                    },
+                    "valueAxis": {
+                        "title": {
+                            "visible": false
+                        }
+                    }
+                },
+
+                "dimensions": [
+                    {
+                        "name": "Modl",
+                        "value": "{Modl}"
+                    }, {
+                        "name": "Name",
+                        "value": "{Name1}"
+                    }
+                ],
+                "measures": [
+                    {
+                        "name": "TotUse",
+                        "value": "{TotUse}"
+                    },
+                    {
+                        "name": "UseRate",
+                        "value": "{UseRate}"
+                    },
+                    {
+                        "name": "CboRate",
+                        "value": "{CboRate}"
+                    },
+                    {
+                        "name": "StdRate",
+                        "value": "{StdRate}"
+                    }, {
+                        "name": "DevNum",
+                        "value": "{DevNum}"
+                    }, {
+                        "name": "CobUse",
+                        "value": "{CobUse}"
+                    }, {
+                        "name": "StdUse",
+                        "value": "{StdUse}"
+                    }
+                ],
+                "feeds": [
+                    {
+                        "uid": "valueAxis",
+                        "type": "Measure",
+                        "values": ["{CobUse}", "{StdUse}"]
+                    }, {
+                        "uid": "categoryAxis",
+                        "type": "Dimension",
+                        "values": ["{Name1}"]
+                    }
+                ]
+            }
+        }
+    }
+
+
+}

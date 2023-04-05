@@ -1,0 +1,58 @@
+<mvc:View controllerName="dash0404.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:tnt="sap.tnt"
+    xmlns="sap.m">
+    
+    <tnt:ToolPage
+    id="tool"
+    class="sapUiDemoToolPage">
+    <tnt:header>
+        <tnt:ToolHeader id="_IDGenToolHeader1">
+            <Button icon="sap-icon://home" type="Transparent" press=".onHomePress"
+            enabled="{= ${/routeName} === 'RouteMain' ? false : true }">
+            </Button>
+            <IconTabHeader
+                id="iconTabHeader"
+                selectedKey="key1"
+                select=".onSelectTab"
+                backgroundDesign="Transparent"
+                mode="Inline">
+                <layoutData>
+                    <OverflowToolbarLayoutData priority="NeverOverflow" shrinkable="true" />
+                </layoutData>
+                <items>
+                    <IconTabFilter key="key1" text="{i18n>Dashboard}"  />
+                    <IconTabFilter key="key2" text="Program Utilization" />
+                    <IconTabFilter key="key3" text="Analyze Program Usage" />
+                    <IconTabFilter key="key4" text="Module Usage" />
+                    <IconTabFilter key="key5" text="Setting" />
+                </items>
+            </IconTabHeader>
+            <Button icon="sap-icon://search" type="Transparent">
+                <layoutData>
+                    <OverflowToolbarLayoutData priority="NeverOverflow" />
+                </layoutData>
+            </Button>
+            <Button icon="sap-icon://comment" type="Transparent">
+                <layoutData>
+                    <OverflowToolbarLayoutData priority="NeverOverflow" />
+                </layoutData>
+            </Button>
+            <MenuButton icon="sap-icon://hint" type="Transparent">
+                <layoutData>
+                    <OverflowToolbarLayoutData priority="NeverOverflow" />
+                </layoutData>
+                <Menu>
+                    <MenuItem text="Edit" icon="sap-icon://edit" />
+                    <MenuItem text="Save" icon="sap-icon://save" />
+                </Menu>
+            </MenuButton>
+        </tnt:ToolHeader>
+    </tnt:header>
+    <tnt:mainContents>
+        <App id="app"/>
+    </tnt:mainContents>
+</tnt:ToolPage>
+   
+</mvc:View>

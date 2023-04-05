@@ -1,0 +1,132 @@
+{
+	"milk": [
+	{
+	  "Store Name": "BC Market",
+	  "Profit": 28939.91,
+	  "Revenue": 330030.97,
+	  "Revenue Growth": -21091.06,
+	  "Target": 20939.91
+	},
+	{
+	  "Store Name": "A&A",
+	  "Profit": 114037.59,
+	  "Revenue": 222148.36,
+	  "Revenue Growth": 8110.77,
+	  "Target": 84037.59
+	},
+	{
+	  "Store Name": "24-Seven",
+	  "Profit": 335829.62,
+	  "Revenue": 428214.13,
+	  "Revenue Growth": 102384.51,
+	  "Target": 235829
+	},
+	{
+	  "Store Name": "Alexei's Specialities",
+	  "Profit": -62037.49,
+	  "Revenue": 131176.71,
+	  "Revenue Growth": -33214.2,
+	  "Target": 74037.59
+	},
+	{
+	  "Store Name": "All-you-need Store",
+	  "Profit": -22709.36,
+	  "Revenue": 178466.82,
+	  "Revenue Growth": -52176.18,
+	  "Target": 12939.91
+	},
+	{
+	  "Store Name": "Choices Franchise 1",
+	  "Profit": 28939.91,
+	  "Revenue": 330030.97,
+	  "Revenue Growth": -21091.06,
+	  "Target": 20939.91
+	},
+	{
+	  "Store Name": "Choices Franchise 2",
+	  "Profit": 202604.65,
+	  "Revenue": 442991.59,
+	  "Revenue Growth": 20386.94,
+	  "Target": 160939.91
+	},
+	{
+	  "Store Name": "Choices Franchise 3",
+	  "Profit": 160645.61,
+	  "Revenue": 352565.16,
+	  "Revenue Growth": 21919.55,
+	  "Target": 128939.91
+	},
+	{
+	  "Store Name": "Choices Franchise 4",
+	  "Profit": 292761.02,
+	  "Revenue": 504072.66,
+	  "Revenue Growth": 11311.64,
+	  "Target": 45039.91
+	},
+	{
+	  "Store Name": "Choices Franchise 5",
+	  "Profit": 273611.54,
+	  "Revenue": 308333.87,
+	  "Revenue Growth": 54722.33,
+	  "Target": 31939.91
+	}
+  ],
+
+  "StateBoard" : [
+    {
+      "Scope": "사용자 시스템 접속 현황 및 사용자 Level",
+      "Status": "A",
+      "Result": "평균 주 4.6회"
+    },
+    {
+        "Scope" : "관리자 경영층의 자료 활용도",
+        "Status" : "C",
+        "Result" : "접속 정보 없음"
+    },
+    {
+        "Scope" : "활용 하는 Transaction",
+        "Status" : "A",
+        "Result" : "2개월 간 3,000번 이상 사용한 16개 Program 대부분이 SCM관련"
+    },
+    {
+        "Scope" : "프로그램 활용도",
+        "Status" : "B",
+        "Result" : "Standard 활용 율 -> 62.6% 개발 Program 사용 율 -> 42.2%(개발 1,026개,  사용 433개)"
+    },
+    {
+        "Scope" : "요청 사항 분석 (CSR System 등록 기준)",
+        "Status" : "B",
+        "Result" : "요청이 별로 없음"
+    },
+    {
+        "Scope" : "입력 Data 적시성 (회계전표 기준)",
+        "Status" : "B",
+        "Result" : "2020년 9월 처리된 전표 40,387건 중 지연처리된 전표는 9,571건으로 지연처리율이 약 24%(적기처리율:76%)"
+    },
+    {
+        "Scope" : "월 결산",
+        "Status" : "C",
+        "Result" : "익월 12-13일 결산 완료, 15-18일 보고"
+    },
+    {
+        "Scope" : "주요 기능 활용 (Health Check 포함)",
+        "Status" : "C",
+        "Result" : "수익성 분석 -> 활용 안함 "
+    },
+    {
+        "Scope" : "주요 기능 활용 (Health Check 포함)",
+        "Status" : "C",
+        "Result" : "MRP 활용 -> 부분 활용"
+    },
+    {
+        "Scope" : "SAP CQC 결과",
+        "Status" : "B",
+        "Result" : "연결되지 않은 프로세스가 다수"
+    },
+    {
+        "Scope" : "라이선스 상황",
+        "Status" : "A",
+        "Result" : "양호"
+    }
+  ]
+}

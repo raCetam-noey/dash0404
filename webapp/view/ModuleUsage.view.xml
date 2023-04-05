@@ -1,0 +1,254 @@
+<mvc:View
+	controllerName="dash0404.controller.ModuleUsage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.uxap"
+	xmlns:f="sap.f"
+	xmlns:l="sap.ui.layout"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:m="sap.m"
+	xmlns:w="sap.ui.integration.widgets"
+	xmlns:forms="sap.ui.layout.form"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		headerContentPinnable="false"
+		showAnchorBar="false"
+	>
+		<headerTitle>
+			<ObjectPageHeader
+				id="ObjectPageHeader"
+				objectTitle="Module Usage"
+				class="sapUiContentPadding"
+			/>
+		</headerTitle>
+		<sections>
+			<ObjectPageSection
+				id="_IDGenObjectPageSection1"
+				titleUppercase="false"
+				title="Connection Status"
+			>
+				<subSections>
+					<ObjectPageSubSection
+						id="_IDGenObjectPageSubSection1"
+						title="활용도 분석"
+						showTitle="false"
+					>
+						<blocks>
+							<m:Table
+								id="table"
+								class="sapUxAPObjectPageSubSectionAlignContent"
+								width="auto"
+								items="{/}"
+							>
+								<m:headerToolbar>
+									<m:OverflowToolbar id="_IDGenOverflowToolbar1">
+										<m:Title
+											id="_IDGenTitle1"
+											text="Products"
+											level="H2"
+										/>
+										<m:ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+										<m:SearchField
+											id="_IDGenSearchField1"
+											width="17.5rem"
+										/>
+										<m:OverflowToolbarButton
+											id="_IDGenOverflowToolbarButton1"
+											tooltip="Sort"
+											text="Sort"
+											icon="sap-icon://sort"
+										/>
+										<m:OverflowToolbarButton
+											id="_IDGenOverflowToolbarButton2"
+											tooltip="Filter"
+											text="Filter"
+											icon="sap-icon://filter"
+										/>
+										<m:OverflowToolbarButton
+											id="_IDGenOverflowToolbarButton3"
+											tooltip="Group"
+											text="Group"
+											icon="sap-icon://group-2"
+										/>
+										<m:OverflowToolbarButton
+											id="_IDGenOverflowToolbarButton4"
+											tooltip="Settings"
+											text="Settings"
+											icon="sap-icon://action-settings"
+										/>
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+								<m:columns>
+									<m:Column id="c1">
+										<m:Text
+											id="t1"
+											text="모듈"
+										/>
+									</m:Column>
+									<m:Column id="c2">
+										<m:Text
+											id="t2"
+											text="내역"
+										/>
+									</m:Column>
+									<m:Column id="c3">
+										<m:Text
+											id="t3"
+											text="사용율"
+										/>
+									</m:Column>
+									<m:Column id="c4">
+										<m:Text
+											id="t4"
+											text="개발본수"
+										/>
+									</m:Column>
+                                    <m:Column id="c5">
+										<m:Text
+											id="t5"
+											text="CBO 사용본수"
+										/>
+									</m:Column>
+                                    <m:Column id="c6">
+										<m:Text
+											id="t6"
+											text="STD 사용갯수"
+										/>
+									</m:Column>
+                                    <m:Column id="c7">
+										<m:Text
+											id="t7"
+											text="CBO+STD"
+										/>
+									</m:Column>
+                                    <m:Column id="c8">
+										<m:Text
+											id="t8"
+											text="CBO 활용율"
+										/>
+									</m:Column>
+                                    <m:Column id="c9">
+										<m:Text
+											id="t9"
+											text="STD 활용율"
+										/>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem
+										id="_IDGenColumnListItem1"
+										vAlign="Middle"
+									>
+										<m:cells>
+											<m:Title
+												textAlign="Center"
+												id="_IDGenText4"
+												text="{Modl}"
+												wrapping="false"
+											/>
+											<m:Text
+												id="_IDGenText5"
+												text="{Name1}"
+												wrapping="false"
+											/>
+											<m:Text
+												id="1"
+												text="{UseRate}"
+												wrapping="false"
+											/>
+											<m:Text
+												id="2"
+												text="{DevNum}"
+												wrapping="false"
+											/>
+											<m:Text
+												id="3"
+												text="{CobUse}"
+												wrapping="false"
+											/>
+                                            <m:Text
+												id="4"
+												text="{StdUse}"
+												wrapping="false"
+											/>
+                                            <m:Text
+                                                id="5"
+                                                text="{TotUse}"
+                                                wrapping="false"
+                                            />
+                                            <m:Text
+                                                id="6"
+                                                text="{CboRate}"
+                                                wrapping="false"
+                                            />
+                                            <m:Text
+                                                id="7"
+                                                text="{StdRate}"
+                                                wrapping="false"
+                                            />
+
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				id="_IDGenObjectPageSection2"
+				titleUppercase="false"
+				title="Contact Information"
+			>
+				<subSections>
+					<ObjectPageSubSection
+						id="_IDGenObjectPageSubSection2"
+						title="Contant Information"
+					>
+						<blocks>
+							<forms:SimpleForm
+								id="_IDGenSimpleForm1"
+								class="sapUxAPObjectPageSubSectionAlignContent"
+								layout="ResponsiveGridLayout"
+							>
+								<l:Grid
+									id="_IDGenGrid2"
+									defaultSpan="XL6 L6 M6 S12"
+								>
+									<w:Card
+										id="_IDGenCard1"
+										manifest="{manifests>/chart2}"
+									>
+										<w:layoutData>
+											<f:GridContainerItemLayoutData
+												id="_IDGenGridContainerItemLayoutData1"
+												rows="6"
+												columns="6"
+											/>
+										</w:layoutData>
+									</w:Card>
+                                    <w:Card
+                                    id="_IDGenCard2"
+                                    manifest="{manifests>/chart1}"
+                                >
+                                    <w:layoutData>
+                                        <f:GridContainerItemLayoutData
+                                            id="_IDGenGridContainerItemLayoutData2"
+                                            rows="6"
+                                            columns="6"
+                                        />
+                                    </w:layoutData>
+                                </w:Card>
+								</l:Grid>
+							</forms:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>

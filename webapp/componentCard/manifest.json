@@ -1,0 +1,120 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "dash0404.componentCard",
+		"type": "card",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+        "dataSources": {
+            "mainService": {
+              "uri": "/sap/opu/odata/SAP/ZASCMT_SRV/",
+              "type": "OData",
+              "settings": {
+                "annotations": [],
+                "localUri": "localService/metadata.xml",
+                "odataVersion": "2.0"
+              }
+            }
+          }
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "dash0404.componentCard.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+        "models": {
+            "mainService": {
+			  "type": "sap.ui.model.odata.v2.ODataModel",
+              "preload": true,
+              "settings": {
+                "synchronizationMode": "None",
+                "operationMode": "Server",
+                "autoExpandSelect": true,
+                "earlyRequests": true
+              }
+            }
+          }
+	},
+	"sap.card": {
+		"type": "Analytical",
+		"header": {
+			"type": "Numeric",
+			"data": {
+				"request": {
+					"url": "/sap/opu/odata/SAP/ZASCMT_SRV/ZASCMT2001Set"
+				},
+				"path": "/d/results"
+
+			   
+			},
+			"title": "Failure Breakdown - Q1, 2019",
+			"mainIndicator": {
+				"number": "{ConnNum}"
+				
+			}
+		},
+		"content": {
+			"chartType": "StackedColumn",
+			"legend": {
+				"visible": true,
+				"position": "Bottom",
+				"alignment": "Left"
+			},
+			"plotArea": {
+				"dataLabel": {
+					"visible": false,
+					"showTotal": false
+				},
+				"categoryAxisText": {
+					"visible": false
+				},
+				"valueAxisText": {
+					"visible": false
+				}
+			},
+			"title": {
+				"visible": false
+			},
+			"measureAxis": "valueAxis",
+			"dimensionAxis": "categoryAxis",
+			"data": {
+				"request": {
+					"url": "/sap/opu/odata/SAP/ZASCMT_SRV/ZASCMT2001Set"
+				},
+				"path": "/d/results"
+
+				
+			 },                          
+				
+			"dimensions": [
+				{
+					"label": "Categories",
+					"value": "{Category}"
+				}
+			],
+			"measures": [
+				{
+					"label": "Revenue",
+					"value": "{Revenue}"
+				},
+				{
+					"label": "Cost",
+					"value": "{Cost}"
+				},
+				{
+					"label": "Target",
+					"value": "{Target}"
+				}
+			]
+		}
+	}
+}
